@@ -1,3 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppoins', sans-serif;
+}
+
 .home{
     height: 100vh;
     background-color: rgba(22, 22, 22, 0.863) ;
@@ -79,14 +86,6 @@
 
 .home-icon a:hover::before{
     width: 100%;
-}
-
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppoins', sans-serif;
 }
 
 body{
