@@ -28,6 +28,33 @@ h2{
 
 }
 
+.header{
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%; 
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 55px;
+    color: #f0ffff;
+    text-decoration: none;
+    font-weight: 600;
+    text-shadow: 0 0 25px rgb(36, 34, 34);
+}
+
+.tagline {
+    font-size: 14px;
+    color: #555; 
+    display: block; 
+}
+
 .form-box{
     position: relative;
     width: 400px;
