@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        XLib
+        Xlib
     </title>
     
     <!--icon link-->
-    <link rel="shortcut icon" href="assets/icon.ico">
+    <link rel="shortcut icon" href="../../assets/icon.ico">
 
     <!--css link-->
     <link rel="stylesheet" href="css/HexToText-style.css">
@@ -27,8 +27,27 @@
     
     <header class="header">
         <a href="../../index.html" class="logo">
-            XLib
+            Xlib
         </a>
     </header>
+
+    <div class="container">
+        <h1>
+            Hex to Text Converter
+        </h1>
+        <label for="hexInput">
+            <input type="text" id="hexInput" placeholder="Enter hex code...">
+        </label>
+        <button onclick="convertHexToText()">
+            Convert
+        </button>
+        <label for="textOutput">
+            Text Output:
+        </label>
+        <textarea id="textOutput" readonly>
+            
+        </textarea>
+    </div>
+    <script src="js/HexToText.js"></script>
 </body>
 </html>
