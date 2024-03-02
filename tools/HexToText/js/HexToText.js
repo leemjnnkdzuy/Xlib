@@ -12,3 +12,7 @@ function convertHexToText() {
         textOutput.value = 'Invalid hex input.';
     }
 }
+
+function redirectToNewPage() {
+    window.location.href = "TextToHex.html";
+}

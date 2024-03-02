@@ -4,27 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        Xlib
-    </title>
+    <title>Xlib</title>
     
-    <!--icon link-->
+    <!-- Icon link -->
     <link rel="shortcut icon" href="../../assets/icon.ico">
 
-    <!--css link-->
-    <link rel="stylesheet" href="css/HexToText-style.css">
+    <!-- CSS link -->
+    <link rel="stylesheet" href="css/TextToHex.css">
     
-    <!--remixicons link-->
+    <!-- Remixicons link -->
     <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
 
-    <!--google fonts link-->
+    <!-- Google Fonts link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap">
 </head>
 
 <body>
-    
     <header class="header">
         <a href="../../index.html" class="logo">
             Xlib
@@ -33,26 +30,26 @@
 
     <div class="container">
         <h1>
-            Hex to Text Converter
+            Text to Hex Converter
         </h1>
-        <a for="hexInput" class="box">
-            <input type="text" id="hexInput" placeholder="Enter hex code...">
+        <a class="box">
+            <input type="text" id="hexInput" placeholder="Enter Text code...">
         </a>
-        <button onclick="convertHexToText()">
+        <button onclick="convertTextToHex()">
             Chuyển Đổi
         </button>
-        <a for="textOutput" class="box">
-            Text Output:
+        <a class="box">
+            Hex Output:
         </a>
-        <textarea id="textOutput" readonly>           
+        <textarea id="hexOutput" readonly>
         </textarea>
-        
-        <div class="HTT">
+
+        <div class="TTH">
             <button onclick="redirectToNewPage()">
-                Text To Hex Converter
+                Hex to Text Converter
             </button>
         </div>
     </div>
-    <script src="js/HexToText.js"></script>
+    <script src="js/TextToHex.js"></script>
 </body>
 </html>
