@@ -141,3 +141,21 @@ input:focus ~ label, input:valid ~ label{
     text-decoration: underline;
 }
 
+.register{
+    margin: -15px 0 15px;
+    font-size: .9em;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin: 25px 0 10px;
+}
+
+.register a{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register a:hover{
+    text-decoration: underline;
+}
