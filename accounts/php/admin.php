@@ -36,7 +36,7 @@
 <body>
 
     <header class="header">
-        <a href="../index.html" class="logo">
+        <a href="../../index.html" class="logo">
             Xlib
             <span class="tagline">
                 Code By LeeMjnnkDzuy x NhàVănHóa2VN
