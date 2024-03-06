@@ -2,11 +2,21 @@
 
     include "connect.php";
 
-    $id = "";
-    $name = "name";
-    $email = "email";
-    $password = "password";
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $id = "";
+        $name = $_POST["name"];
+        $email = $_POST["email"];
+        $password = $_POST["password"];
+    }
+    else{
+        header('location:../../err.html');
+    }
 
-    $sql = "INSERT TO account(id, name, email, password)
-    VALUE('$id', '$name', '$email', '$password')";
+
+    $sql = "INSERT INTO account(id, name, email, password)
+    VALUES('$id', '$name', '$email', '$password')";
+
+    mysqli_query($conn, $sql);
+
+     'Tạo tào khoản thành công';
 ?>
