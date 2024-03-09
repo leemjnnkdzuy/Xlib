@@ -11,10 +11,9 @@
         header('location:../../err.html');
     }
 
-    $sql = "INSERT INTO account(id, name, email, password)
-    VALUES('$id', '$name', '$email', '$password')";
+    $sql = "INSERT INTO account(id, name, email, password) VALUES('$id', '$name', '$email', '$password')";
 
     mysqli_query($conn, $sql);
 
-    imap_alerts('Tạo tào khoản thành công');
+    header('location:../welcome.html');
 ?>

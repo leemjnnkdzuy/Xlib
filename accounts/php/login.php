@@ -6,52 +6,45 @@ if (isset($_SESSION['user_id'])) {
     exit();
 }
 
+$email = $_POST['email'];
+$password = $_POST['password'];
+$remember = isset($_POST['remember']) ? true : false;
+
 if (isset($_POST['login'])) {
     if (isset($_POST['email']) && isset($_POST['password'])) {
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        $remember = isset($_POST['remember']) ? true : false;
 
         // Admin login
         $hashedAdminPassword = password_hash("admin", PASSWORD_DEFAULT);
         if ($email == "admin@admin.com" && password_verify($password, $hashedAdminPassword)) {
             $_SESSION['email'] = $email;
 
-            if ($remember) {
-                
+            if ($remember == true) {
+                $_SESSION['mySESSION'] = '$email';
             }
-
             header('location: admin.php');
             exit();
         } else {
             // User login
-            $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-
-            $query = "SELECT * FROM account WHERE email = '$email'";
+            $query = "SELECT * FROM account WHERE email = '$email' and password = '$password'";
             $result = mysqli_query($conn, $query);
 
-            if ($result) {
-                $row = mysqli_fetch_assoc($result);
+            if (mysqli_num_rows($result) == 1) {
 
-                if ($row && password_verify($password, $row['password'])) {
-                    $_SESSION['logged_in'] = true;
-                    $_SESSION['email'] = $email;
-                    header('Location: ../../pages/posts.html');
-                    exit();
-                } else {
-                    $_SESSION['error_message'] = 'Email hoặc mật khẩu không đúng';
-                    header('Location: ../login.html');
-                    exit();
+                if ($remember == true) {
+                    $_SESSION['mySESSION'] = '$email';
                 }
+
+                header('Location: ../../pages/posts.php');
+                exit();
             } else {
-                $_SESSION['error_message'] = 'Lỗi cơ sở dữ liệu';
+                $_SESSION['error_message'] = 'Email hoặc mật khẩu không đúng';
                 header('Location: ../login.html');
                 exit();
             }
         }
     } else {
-        header('location:../login.html');
-        exit();
+    header('location:../login.html');
+    exit();
     }
 }
 ?>
